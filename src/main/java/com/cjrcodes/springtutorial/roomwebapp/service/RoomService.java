@@ -43,5 +43,9 @@ public class RoomService {
 		
 		return roomList;
 	}
+	
+	public Room getById(long id) {
+		return roomRepository.findById(id).get();
+	}
 
 }

@@ -30,13 +30,13 @@ public class Staff {
 	
 	@Column(name="POSITION")
 	@Enumerated(EnumType.STRING)
-	private String position;
+	private Position position;
 
 	public Staff() {
 	this.staffId = UUID.randomUUID().toString();
 	}
 
-	public Staff(String staffId, String firstName, String lastName, String position) {
+	public Staff(String staffId, String firstName, String lastName, Position position) {
 		this.staffId = staffId;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -69,11 +69,11 @@ public class Staff {
 		this.lastName = lastName;
 	}
 
-	public String getPosition() {
+	public Position getPosition() {
 		return position;
 	}
 
-	public void setPosition(String position) {
+	public void setPosition(Position position) {
 		this.position = position;
 	}
 
